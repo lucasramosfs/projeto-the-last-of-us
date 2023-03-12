@@ -14,7 +14,7 @@
         align-items: center;
     }
 
-    .informacoes .descricoes{
+    .informacoes .descricao{
         width: 60%;
         text-align: center;
     }
@@ -26,7 +26,7 @@
 
     }
 
-    .informacoes .descricoes{
+    .informacoes .descricao{
         width: 100%;
     }
 
