@@ -114,3 +114,21 @@ main:after{
     }
 }
 
+.conteudo .informacoes .descricao{
+    display: none;
+    animation: mudarTexto;
+}
+
+.conteudo .informacoes .descricao.mostrada{
+    display: block;
+}
+
+@keyframes mudarTexto{
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
