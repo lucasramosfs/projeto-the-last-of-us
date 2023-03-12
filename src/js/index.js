@@ -22,6 +22,7 @@
 //console.log()  mostra algo dentro do console em inspecionar
 const botoesCarrossel = document.querySelectorAll('.botao'); //pegando tudo que tem a classe botao. "const" = constante
 const imagens = document.querySelectorAll('.imagem');
+const textos = document.querySelectorAll('.descricao');
 
 //passo 2 - dar um jeito de identificar o clique do usuario no botão
 
@@ -43,27 +44,30 @@ botoesCarrossel.forEach((botao, indice) => { //forEach = laço
         selecionarBotaoCarrossel(botao); //está adicionando a classe selecionado
 
         //passo 5 - esconder a imagem ativa de fundo
-        esconderImagemAtiva(); //tirando o ativa
+        esconderImagemAtivaETextoMostrado(); //tirando o ativa
 
         //passo 6 - fazer aparecer a imagem de fundo correspondente ao botão clicado
-        esconderImagemDeFundo(indice); // colocando o ativa
+        mostrarImagemDeFundoETextoMostrado(indice); // colocando o ativa
         
     })
 })
 
 
 //refactor... global
-function esconderImagemDeFundo(indice) {
+function mostrarImagemDeFundoETextoMostrado(indice) {
     imagens[indice].classList.add('ativa');
+    textos[indice].classList.add('mostrada');
 }
 
 function selecionarBotaoCarrossel(botao) {
     botao.classList.add('selecionado');
 }
 
-function esconderImagemAtiva() {
+function esconderImagemAtivaETextoMostrado() {
     const imagemAtiva = document.querySelector('.ativa'); 
     imagemAtiva.classList.remove('ativa');
+    const textoMostrado = document.querySelector('.mostrada');
+    textoMostrado.classList.remove('mostrada');
 }
 
 function desativarBotaoDesativado() { 
